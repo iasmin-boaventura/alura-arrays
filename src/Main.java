@@ -6,8 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setTitulo("A Escolha Perfeita");
+        Filme meuFilme = new Filme("A Escolha Perfeita");
         meuFilme.setAnoLancamento(2012);
         System.out.println("Duração: " + meuFilme.getDuracaoEmMinutos());
 
@@ -45,8 +44,7 @@ public class Main {
 
         filtro.filtra(episodio);
 
-        Filme outroFilme = new Filme();
-        outroFilme.setTitulo("Macunaíma");
+        Filme outroFilme = new Filme("Macunaíma");
         outroFilme.setDuracaoEmMinutos(110);
         outroFilme.setDiretor("Joaquim Pedro de Andrade");
         outroFilme.setAnoLancamento(1969);
