@@ -8,6 +8,11 @@ public class Titulo {
     private double somaAvaliacoes = 0;
     private int totalAvaliacoes = 0;
 
+    public Titulo(String titulo, int anoLancamento) {
+        this.titulo = titulo;
+        this.anoLancamento = anoLancamento;
+    }
+
     public String getTitulo() {
         return titulo;
     }

@@ -1,13 +1,11 @@
-
+package br.com.alura.screenmatch;
 import br.com.alura.screenmatch.modelos.*;
 import br.com.alura.screenmatch.calculos.*;
-
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("A Escolha Perfeita");
-        meuFilme.setAnoLancamento(2012);
+        Filme meuFilme = new Filme("A Escolha Perfeita", 2012);
         System.out.println("Duração: " + meuFilme.getDuracaoEmMinutos());
 
         meuFilme.avalia(10);
@@ -15,9 +13,7 @@ public class Main {
         meuFilme.exibeFichaTecnica();
 
         //Seria
-        Serie tbbt = new Serie();
-
-        tbbt.setTitulo("The Big Bang Theory");
+        Serie tbbt = new Serie("The Big Bang Theory", 2000);
         tbbt.setTemporadas(8);
         tbbt.setEpisodiosTemporada(20);
         tbbt.setMinutoEpisodio(20);
@@ -44,10 +40,9 @@ public class Main {
 
         filtro.filtra(episodio);
 
-        Filme outroFilme = new Filme("Macunaíma");
+        Filme outroFilme = new Filme("Macunaíma", 1969);
         outroFilme.setDuracaoEmMinutos(110);
         outroFilme.setDiretor("Joaquim Pedro de Andrade");
-        outroFilme.setAnoLancamento(1969);
         outroFilme.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -56,6 +51,8 @@ public class Main {
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getTitulo());
         System.out.println("toString do Filme: " + listaDeFilmes.get(0).toString());
+
+        System.out.println("outroFilme: " + outroFilme.toString());
 
     }
 }
